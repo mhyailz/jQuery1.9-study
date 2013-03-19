@@ -1,0 +1,29 @@
+<!--
+   $(a).xx.addBack() ==========  获取的是xx的元素集合 + $(a)的合集合。
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>addBack</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $("p.secondP").siblings().addBack().css("background","#ff0000");
+         //  $("div.two").find("p").addBack().css("background","#ff0");
+        });
+    </script>
+</head>
+<body>
+    <div class="first">
+        <p>this is one</p>
+        <p class="secondP">this is two</p>
+        <h2>this is h2</h2>
+        <h5>this is h5</h5>
+    </div><br/>
+    <div class="two">
+        <p>this is three</p>
+        <p>this is four</p>
+    </div>
+</body>
+</html>

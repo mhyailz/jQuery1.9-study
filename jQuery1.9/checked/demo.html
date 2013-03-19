@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>checked</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+             function countChecked(){
+                 var n = $(":checked").length;
+                 console.log( n + ( n ===1 ? ' is': ' are') + " checked");
+             }
+
+             $("input[type = 'checkbox']").bind("click",countChecked);
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <input type="checkbox" />
+        <input type="checkbox" checked="checked" />
+        <input type="checkbox" />
+        <input type="checkbox" checked="checked" />
+        <input type="checkbox" />
+        <input type="checkbox" checked="checked" />
+    </div>
+</body>
+</html>

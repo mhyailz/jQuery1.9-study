@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>outerWidth</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            height: 20px;
+            border: 1px #dc143c solid;
+            padding: 0 10px;
+            width: 200px;
+            margin: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is a p</p>
+    <script>
+        (function($){
+            var c = $("p").outerWidth(true);
+            var d = $("p").width();
+
+
+            console.log(c);              //222     参数为true的时候为262
+            console.log(d);              //200
+
+
+
+        })(jQuery);
+    </script>
+</body>
+</html>

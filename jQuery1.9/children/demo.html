@@ -1,0 +1,28 @@
+<!--
+
+   $(parent).children()获取的是parent内有标签的部分，但是不会获取再一步标签内的元素。注：因为有些元素是随父级元素影响，故而显示是受控制。
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>children</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $(".box1").children().css({
+                 color : "#ffadad"
+             })
+             console.log($(".box1").children());
+         })
+    </script>
+</head>
+<body>
+    <div class="box1">
+         this is box1 <p> this is box1 -> p </p>
+        <p> this is another p <em style=" color: #cccccc"> this is another p -> em </em></p>
+    </div>
+</body>
+</html>

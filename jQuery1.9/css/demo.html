@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("button").bind("click",function(){
+                  $("div").css({
+                      width : function(){
+                          return "200px"
+                      },
+                      height : function(){
+                          return "100px"
+                      },
+                      background : function(){
+                          return "#ffadad"
+                      }
+                  })
+             })
+         })
+    </script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <button>change</button>
+</body>
+</html>

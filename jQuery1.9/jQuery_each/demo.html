@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.each</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is one</p>
+    <p>this is two</p>
+    <p>this is three</p>
+    <script>
+        var c = $("p");
+        (function($){
+            $.each(c,function(index,element){
+                console.log(index + " : " + element.innerHTML);
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

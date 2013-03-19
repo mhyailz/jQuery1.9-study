@@ -1,0 +1,47 @@
+<!--
+
+    $(document).ajaxSend() =======
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ajaxSend</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $(document).ajaxSend(function(event,xhr,settings){
+               // $(".log").html(settings.url);
+                console.log("ajaxSend");
+            });
+
+            $(document).ajaxComplete(function(event,xhr,settings){
+               // $(".log").html(settings.url);
+                console.log("ajaxComplete");
+            });
+            $(document).ajaxSuccess(function(){
+                console.log("ajaxSuccess");
+            })
+            $(document).ajaxError(function(event,xhr,settings){
+                $(".log").html(settings.url);
+            });
+
+            $(".content").load("test.html");
+        })
+
+
+
+                    //                     ajaxSend
+                   //                      GET http...
+                  //                       ajaxSuccess
+                 //                        ajaxComplete
+    </script>
+</head>
+<body>
+    <div class="content">
+
+    </div>
+    <div class="log"></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>event:namespace</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("button").click(function(e){
+                 console.log(e.namespace);
+             })
+             $("button").trigger("click",function(){
+                 $
+             })
+         })
+    </script>
+</head>
+<body>
+    <div>
+        <button>click</button>
+    </div>
+</body>
+</html>

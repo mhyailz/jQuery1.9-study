@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keydown</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="text" />
+    <button>click</button>
+    <script>
+        (function(){
+            $("input").keydown({name : "mhy",age:12},function(event){
+                //console.log(event);
+                console.log(event.data.name);           //mhy
+            });
+            $("button").click(function(){
+                $("input").keydown();
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>remove</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is a p</p>
+    <a>this is a a</a>
+    <span>this is a span</span>
+    <script>
+        (function($){
+            /*
+            var p = $("p").remove();         //没有标签
+            var a = $("a").empty();         //留有空标签
+            var span = $("span").detach();     //没有标签
+            console.log(p);
+            console.log(a);
+            console.log(span);
+
+            */
+
+            /* detach & remove different  */
+
+            $("p").hover(function(){
+                $(this).css("color","#f00");
+            },function(){
+                $(this).css("color","#000");
+            });
+            var p = $("p").detach();
+            p.appendTo($("body"));          // hover扔有效
+
+            var p2 = $("p").remove();
+            p2.appendTo($("body"));        //hover无效
+
+            var p3 = $("p").empty();
+
+            p3.appendTo($("body"));       //元素无法恢复，本质上来说empty是把元素内容清空，保留空标签
+            console.log(p3);
+        })(jQuery);
+    </script>
+</body>
+</html>

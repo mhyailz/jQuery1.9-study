@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dblclick</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ffadad;
+
+        }
+        .ylw{
+            background: #aa0;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("div").dblclick(function(){
+                $(this).toggleClass("ylw");
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

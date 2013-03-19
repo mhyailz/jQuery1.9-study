@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>blur</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("#tx").bind({
+                focus : function(){
+                    $(this).stop().animate({
+                        width : "+=50",
+                        fontWeight : "600"
+                    },500) ;
+                },
+                blur : function(){
+                    $(this).stop().animate({
+                        width : "-=50"
+                    },500)
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <button id="btn" value="change">change</button>
+    <input  id="tx" type="text" />
+    <input  id="tx2" type="text" />
+</body>
+</html>

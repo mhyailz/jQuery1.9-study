@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.isArray</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var c = [];
+            var b = new Array ;
+            var a = new Object ;
+            console.log($.isArray(c));          //true
+            console.log($.isArray(b));          //true
+            console.log($.isArray(a));          //false
+        })(jQuery);
+    </script>
+</body>
+</html>

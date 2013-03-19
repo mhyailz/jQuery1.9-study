@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>finish</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+     <button>go</button>
+     <button>finish</button>
+     <a>this is a p</a>
+     <div></div>
+     <script>
+         $(function(){
+             $('div').css({
+                 width : "100px",
+                 height : "100px",
+                 background : "#ffadad",
+                 display : "none"
+             });
+             $("a").bind({
+                 "mouseenter" : function(){
+                     $('div').finish().fadeIn();
+                 },
+                 "mouseleave" : function(){
+                     $("div").finish().fadeOut();
+                 }
+             })
+         })
+     </script>
+</body>
+</html>

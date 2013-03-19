@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.unique</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="foo"></div>
+    <div class="foo"></div>
+    <div class="foo"></div>
+    <script>
+        (function($){
+            var c = $(".foo").get();
+            c = $.unique(c);
+            console.log(c);
+        })(jQuery);
+    </script>
+</body>
+</html>

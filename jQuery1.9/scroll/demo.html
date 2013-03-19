@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>scroll</title>
+    <style>
+        p{
+            line-height: 30px;
+        }
+        span{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is a p <span>this is a span</span></p>
+    <p>this is a p <span>this is a span</span></p>
+    <p>this is a p <span>this is a span</span></p>
+    <p>this is a p <span>this is a span</span></p>
+    <p>this is a p <span>this is a span</span></p>
+    <p>this is a p <span>this is a span</span></p>
+    <p>this is a p <span>this is a span</span></p>
+    <script>
+        jQuery(document).ready(function($){
+            $(window).on({
+                scroll : function(){
+                    $("span").fadeIn("1000")
+                }
+            })
+        })
+    </script>
+</body>
+</html>

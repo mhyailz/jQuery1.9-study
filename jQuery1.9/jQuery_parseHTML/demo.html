@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.parseHTML</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var str ="<b>this is a b</b>";
+            var c = $.parseHTML(str);
+            console.log(c);
+            $(c).prependTo($("body"));
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>show</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        jQuery(document).ready(function($){
+            $(".box").css({
+                background : "#ffadad",
+                width : "100px",
+                height : "100px",
+                borderRadius : "3px"
+            });
+            $('.box').hide("3000").show("3000");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>filter</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+</head>
+<body>
+     <div class="first"></div>
+     <div class="second"></div>
+     <div class="third"></div>
+     <div class="forth"></div>
+     <script>
+         $(function(){
+             $("div").css({width:"20px",height: "20px",background : "#ffadad",float : "left",margin : "5px"})
+                      .filter(".second")
+                      .css({border: "1px solid #ccc"});                  //   select
+             $("div").filter(function(index){
+                 return index == 0 || index == 2 ;
+             }).css({background : "#ff0"});                              //    function
+             $("div").filter(document.getElementsByTagName("div")[0]).css({background : "#f00"});     //element
+             $("div").filter($(".third")).css({background : "#0ff"});  //    jQuery object.
+         })
+     </script>
+</body>
+</html>

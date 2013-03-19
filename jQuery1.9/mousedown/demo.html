@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mousedown</title>
+    <style>
+        b{
+            margin-right: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            $(document).on("mousedown mouseup mouseover mouseenter mouseleave mouseout mousemove",function(event){
+               $("body").append("<b>" + event.type + "</b>");
+               return false;
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>toggleClass</title>
+    <style>
+        .on{
+            color: #ff0000;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p class="on">this is a p</p>
+    <script>
+        jQuery(document).ready(function($){
+            $("p").on({
+                click : function(){
+                    $(this).toggleClass("on");
+                }
+            })
+        });
+    </script>
+</body>
+</html>

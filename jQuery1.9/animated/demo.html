@@ -1,0 +1,51 @@
+<!--
+
+      :animated获取当前动画的元素。
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>animated</title>
+    <style type="text/css">
+        div{
+            background-color: #ffadad;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 0 5px;
+            border: 1px #ccc solid;
+        }
+        .green{
+            background-color: #0d0;
+        }
+        #change{
+           clear: left;
+           display: block;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("#change").click(function(){
+                $("div:animated").toggleClass("green");
+            });
+            function animateIt() {
+                $(".move").slideToggle("slow", animateIt);
+            }
+            animateIt();
+        })
+    </script>
+</head>
+<body>
+
+    <div></div>
+    <div class="move"></div>
+    <div class="move"></div>
+    <div></div>
+    <button id="change" value="change">change</button>
+
+</body>
+</html>

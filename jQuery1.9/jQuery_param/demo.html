@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.param</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var c = {name : "mhy",age: 12};
+            var str = $.param(c);
+            console.log(c);               // no change
+            console.log(str);             //name=mhy&age=12
+        })(jQuery);
+    </script>
+</body>
+</html>

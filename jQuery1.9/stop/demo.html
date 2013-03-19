@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>stop</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <button>click</button>
+    <div class="box"></div>
+    <script>
+        jQuery(document).ready(function($){
+            $(".box").css({
+                background : "#ffadad",
+                border : "1px solid #8f8",
+                borderRadius : "5px",
+                width : "100px",
+                height : "100px"
+            });
+            $("button").click(function(){
+                $(".box").stop().slideToggle("2000");
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>event:preventDefault</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("a").click(function(e){
+                e.preventDefault();
+                $("<div>").append("the"+ e.typeName + "is prevent").appendTo(".contain");
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="http://www.baidu.com">this is a a to bai du</a>
+    <div class="contain"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>delegate</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("div").css({
+                width : "100px",
+                height : "100px",
+                background : "#ffadad"
+            });
+            $("body").delegate("div","click",function(e){
+                console.log(e.target.nodeName);
+            })               //在1.7之后已经被on取代
+              //
+              //
+            $("body").on("click","div",function(e){
+                console.log(e.target.nodeName);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

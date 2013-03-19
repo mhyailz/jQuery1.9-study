@@ -1,0 +1,43 @@
+<!--
+        $(a).addClass(arg) =====为选定的jquery对象加类
+
+        arg可为：1，"red";
+                 2, "red blue"
+                 3, function(){ return "xxx"}
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>addClass</title>
+    <style>
+        .black{
+            color: #000;
+        }
+        .green{
+            color: #0f0;
+        }
+        .red{
+            color: #f00;
+        }
+        .blue{
+            color: #00f;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("div").addClass("red").addClass("blue");
+
+            $("div").addClass(function(){
+                return "green";
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="black">       <!-- <div class="black red blue green">  显示的颜色为最终定义的blue -->
+        this is a test.
+    </div>
+</body>
+</html>

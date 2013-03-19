@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>has attribute selector</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p id="demo1">this has id</p>
+    <p>this has no id</p>
+    <p>this has no id</p>
+    <p id="demo2" data-name="home">this has id</p>
+    <script>
+        $(function(){
+            $("p[data-name]").click(function(){
+                  console.log($(this).attr("id"));
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>text</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div>this is a div</div>
+    <script>
+        jQuery(document).ready(function($){
+            var c = $("div").text();       //单纯的字符串，并非对象
+            $("div").text("this is a another div");
+            console.log(c);
+        });
+    </script>
+</body>
+</html>

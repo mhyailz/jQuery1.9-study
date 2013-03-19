@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.type</title>
+    <script type ="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var boolean = $.type(true); console.log(boolean);       //boolean
+            var array   = $.type([])  ; console.log(array);         //array
+            var object  = $.type({})  ; console.log(object);        //object
+            var number  = $.type(3)   ; console.log(number);        //number
+            var regexp  = $.type(/ab/); console.log(regexp);        //regexp
+        })(jQuery);
+    </script>
+</body>
+</html>

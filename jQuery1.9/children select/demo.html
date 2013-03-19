@@ -1,0 +1,39 @@
+<!--
+
+
+   $(parent > children)获取子元素。
+
+
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> parent > child</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+           $("div > p").css({
+               color : "#ffadad"
+           })
+           $("div.box1 > p").css({
+               textDecoration : "underline",
+               color : "#dd0"
+           })
+       })
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <p> this is out p.
+            <div>
+               <p> this is iner p</p>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

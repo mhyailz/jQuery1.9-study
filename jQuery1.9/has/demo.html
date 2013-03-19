@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>has</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <p>
+        this is a p
+        <a>this is a </a>
+    </p>
+    <script>
+        $(function($){
+            $("p").has(document.getElementsByTagName("a")).css({
+                background : "#ffadad"
+            })
+            $("p").has("a").css({
+                textDecoration : "underline"
+            })
+            console.log($("p").has(document.getElementsByTagName("a")));
+        })
+    </script>
+</body>
+</html>

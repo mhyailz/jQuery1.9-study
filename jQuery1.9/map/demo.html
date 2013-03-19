@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>map</title>
+    <style>
+        div{
+            width: 20px;
+            float: left;
+        }
+        #first{
+            background: #f00;
+            height: 20px;
+        }
+        #second{
+            background: #0f0;
+            height: 50px;
+        }
+        #third{
+            background: #00f;
+            height: 80px;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div id="first"></div>
+    <div id="second"></div>
+    <div id="third"></div>
+    <button>chick</button>
+    <script>
+        (function(){
+            var c = $("div").map(function(index,element){
+                //console.log($(element).height());
+                return $(element).height();
+            }).get();
+            var d = Math.max.apply(null,c);
+            console.log(d);
+            //console.log(c);
+            $("button").click(function(){
+                $("div").animate({
+                    height : d
+                },200);
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bind</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .box{
+            border: 1px solid #000;
+            background: #ffadad;
+            height: 100px;
+            width: 100px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+
+            $(".box").bind("click",function(event){
+                //console.log($(this).text());
+                console.log(event.pageX + "..." + event.pageY);
+            });
+
+            $(".box").bind("mouseover mouseout",function(event){
+               //console.log(event.type);
+              //  console.log(event.pageX + "..." + event.pageY);
+            });
+
+            $(".box").bind({
+                dblclick : function(event){
+                   //  console.log(event.type);
+                },
+                mouseenter : function(event){
+                   // console.log(event.type);
+                }
+            })
+
+            var message = "msg";
+            $(".box").bind("click",{msg : message},function(event){
+                  console.log(event.data.msg);
+            });
+            message = "msg2";
+            $(".box").bind("mouseenter",{msg : message},function(event){
+                  console.log(event.data.msg);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="box">这是一个盒子</div>
+</body>
+</html>

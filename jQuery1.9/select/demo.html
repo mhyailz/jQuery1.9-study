@@ -1,0 +1,26 @@
+<!--
+    select 只用于input type=text 和 <textarea></textarea>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>select</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is a p</p>
+    <input type="text" value="this is a text" />
+    <textarea>
+        this is a textarea.
+    </textarea>
+    <script>
+        jQuery(document).ready(function($){
+           $("p").on({
+               select : function(e){
+                   console.log(e);
+               }
+           })
+        });
+    </script>
+</body>
+</html>

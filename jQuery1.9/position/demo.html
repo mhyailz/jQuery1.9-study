@@ -1,0 +1,46 @@
+<!--
+    .position()并不计算元素的margin值，会计算border值，但是前一个元素的margin值会影响下一个元素的position，具体可看实例
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>position</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            border: 20px solid #8b4513;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+        }
+        .inner{
+            border: 10px solid #6a5acd;
+            margin-top:0px;
+            height: 20px;
+        }
+        p{
+            border: 10px solid #dc143c;
+            margin-top: 1px;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="inner">this is a div</div>
+        <p>this is a </p>
+    </div>
+    <script>
+        (function($){
+            var div = $(".inner").position();
+            console.log(div);
+            var p = $("p").position();
+            console.log(p);
+        })(jQuery);
+    </script>
+</body>
+</html>

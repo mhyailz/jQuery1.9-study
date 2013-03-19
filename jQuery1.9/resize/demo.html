@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>resize</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is a p</p>
+    <script>
+        (function($){
+            /*
+            $(window).resize(function(e){
+                console.log($(this).width());
+
+            })*/
+            $(document).on("contextmenu",function(e){
+                console.log(e);
+                return false;
+            })                            //禁止右击
+            $(document).on("selectstart",function(e){
+                console.log(e);
+                return false;            //禁止选择文字
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>event.data</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("ul").on("click","li",{value : "this is a li"},function(e){
+                 console.log(e.currentTarget);     // li
+                 console.log(e.target)              // li
+                 console.log(e.delegateTarget);   // ul
+                 console.log(e.data)                //object{ value: " this is a li"}
+             })
+         })
+    </script>
+</head>
+<body>
+        <ul>
+            <li>this is one</li>
+            <li>this is two</li>
+            <li>this is three</li>
+            <li>this is four</li>
+        </ul>
+</body>
+</html>

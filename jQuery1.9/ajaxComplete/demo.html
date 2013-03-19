@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ajaxComplete</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+          $(function(){
+              $(document).ajaxComplete(function(event,xhr,settings){
+                   console.log(settings);
+              });                 //完成一次ajax调用一次ajaxComplete.
+              $.ajax({
+                url : "test.html"
+              }).done(function(html){
+                $(".log").append(html);
+              })
+              $.ajax({
+                  url : "test.html"
+              }).done(function(html){
+                 $(".log").append(html);
+              })
+          })
+    </script>
+</head>
+<body>
+    <div class="log"></div>
+</body>
+</html>

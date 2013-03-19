@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>unbind</title>
+    <style>
+        .on{
+            color: #f00;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <button id="bind">bind</button><button id="unbind">unbind</button>
+    <p class="on">this is a p</p>
+    <script>
+        jQuery(document).ready(function($){
+            var handle = function(){
+                $(this).toggleClass("on");;
+            }
+            $("p").on({
+                click : handle
+            });
+            $("#bind").on({
+                click : function(){
+                    $("p").bind("click",handle);
+                }
+            });
+            $("#unbind").on({
+                click : function(){
+                    $("p").unbind("click",handle);
+                }
+            })
+        });
+    </script>
+</body>
+</html>

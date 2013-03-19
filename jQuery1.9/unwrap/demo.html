@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>unwrap</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <b><a>this is a</a></b>
+    <button>click</button>
+    <script>
+        jQuery(document).ready(function($){
+           $("button").click(function(){
+               if($("a").parent().is("b")){
+                   $("a").unwrap("b");
+               }else{
+                   $("a").wrap("<b></b>");
+               }
+           })
+
+
+        });
+    </script>
+</body>
+</html>

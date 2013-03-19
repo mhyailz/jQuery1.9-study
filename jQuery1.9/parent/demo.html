@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>parent</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is a p
+        <span><b>this is a span</b></span>
+    </p>
+    <p class="second-p">
+        <span>this is two span</span>
+    </p>
+    <script>
+        (function($){
+            var oP = $("span").parent();
+            console.log(oP);
+            var c = $("span").parents(".second-p");
+            console.log(c);
+            var d = $("b").parentsUntil("body");
+            console.log(d);
+            //Object[p, p.second-p]
+
+           // Object[p.second-p]
+
+            //Object[span, p]
+        })(jQuery);
+    </script>
+</body>
+</html>

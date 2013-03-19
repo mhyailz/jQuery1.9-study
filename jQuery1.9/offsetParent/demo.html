@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>offsetParent</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div><p>
+        this is a p
+    </p></div>
+    <script>
+        (function($){
+            var c = $("div p").offsetParent();
+            console.log(c);
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>:nth-child</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+        <li>this is four</li>
+        <li>this is five</li>
+    </ul>
+    <script>
+        (function($){
+            $("li:nth-child(2n+1)").css({
+                textDecoration : "underline"
+            });
+            $("li:even").css({
+                color : "#8f8"
+            });
+            $("li").eq(0).css({
+                background : "#ffadad"
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

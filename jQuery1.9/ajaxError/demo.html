@@ -1,0 +1,26 @@
+<!--
+
+    $(document).ajaxError(event,xhr,settings,msg)   ======当页面发生ajax请求的时候出错会调用ajaxError.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ajaxError</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        var req = $.ajax({
+            url : "test.htm",
+            async : true
+        });
+        $(document).ajaxError(function(event,xhr,settings,msg){
+            console.log("the page \t" + settings.url + " \t is not exist");
+            console.log(msg);
+        })                               //ajaxError()的调用者为$(document)
+    </script>
+</head>
+<body>
+<div class="log"></div>
+</body>
+</html>

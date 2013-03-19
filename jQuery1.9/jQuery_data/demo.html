@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.data</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var handle = $("body");
+            $.data(handle,"test",{
+                name : "mhy",
+                age : 12
+            });
+            console.log($.data(handle,"test").name);
+        })(jQuery);
+    </script>
+</body>
+</html>

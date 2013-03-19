@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>replaceAll</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is one</p>
+    <p>this is two</p>
+    <p>this is three</p>
+    <p>this is four</p>
+    <script>
+        (function($){
+            $("p").click(function(){
+                $("<b>this is b</b>").replaceAll($("p"));
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

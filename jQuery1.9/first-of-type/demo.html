@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>first-of-type</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is a</li>
+        <li>this is b</li>
+        <li>this is c</li>
+    </ul>
+    <ul>
+        <li>this is a</li>
+        <li>this is b</li>
+        <li>this is c</li>
+    </ul>
+    <script>
+        $(function(){
+            $("li:first-of-type").css({
+                fontSize : "20px"
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>replaceWith</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+    <script>
+        (function($){
+            var c = $("p");
+            console.log(c);          //为空
+        })(jQuery);
+    </script>
+</head>
+<body>
+    <p>this is one</p>
+    <p>this is two</p>
+    <p>this is three</p>
+    <p>this is four</p>
+    <script>
+        (function($){
+            $("p").replaceWith($("<b>this is a b</b>"));
+        })(jQuery);
+    </script>
+</body>
+</html>

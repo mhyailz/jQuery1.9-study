@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>:empty</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("div").css({
+                 width : "100px",
+                 height : "100px",
+                 background : "#ffadad",
+                 margin : "10px"
+             });
+             $("div:empty").css({
+                 background : "#0f0"
+             })                          // only 2 div change
+         })
+    </script>
+</head>
+<body>
+    <div>this is a div</div>
+    <div></div>
+    <div><p>this is a p</p></div>
+</body>
+</html>

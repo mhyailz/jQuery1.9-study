@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>prev + next</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <b id="foo">this is one</b>
+    <b>this is two</b>
+    <b>this is three</b>
+    <script>
+        (function($){
+            $("#foo + b").css({
+                textDecoration : "underline"
+            });
+            $("#foo ~ b").css({
+                background : "#ffadad"
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

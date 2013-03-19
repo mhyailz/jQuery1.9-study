@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>id selector</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p id="note.[all]"> this is note.all</p>
+    <script>
+        $(function(){
+            $("#note\\.\\[all\\]").css({
+                fontSize : "20px"
+            })
+        })
+    </script>
+</body>
+</html>

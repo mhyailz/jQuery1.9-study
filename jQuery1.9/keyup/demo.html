@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keyup</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="text" />
+    <script>
+        (function($){
+            $("input").keyup(function(event){
+               console.log(event);
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

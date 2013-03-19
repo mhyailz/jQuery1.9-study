@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>even</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("p:even").css({
+                 color : "#ffadad"
+             });
+
+             $("p").filter(":even").css({
+                 fontWeight : "600"
+             })                     //这个在性能上比前者稍好
+
+         })
+    </script>
+</head>
+<body>
+    <div>
+        <p>this is zero</p>
+        <p>this is one</p>
+        <p>this is two</p>
+        <p>this is three</p>
+        <p>this is four</p>
+        <p>this is five</p>
+    </div>
+</body>
+</html>

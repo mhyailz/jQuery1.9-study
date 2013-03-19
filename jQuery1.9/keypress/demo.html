@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keypress</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="text" />
+    <script>
+        (function($){
+            $("input").keypress(function(event){
+               console.log(event.which);             //键盘的键值 更全面些
+            });
+            $("input").keydown(function(event){
+                console.log(event.which);           // ASCII值 没有话，默认返回为0
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

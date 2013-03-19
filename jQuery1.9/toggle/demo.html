@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>toggle</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .box{
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box li{
+            margin-bottom: 5px;
+        }
+        .title{
+            border-radius: 3px;
+            background: silver;
+            cursor: pointer;
+        }
+        .box li div{
+            display: none;
+            background: teal;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul class="box">
+        <li>
+            <h4 class="title">this is one</h4>
+            <div>
+               <a>this is one-one</a><a>this is one-two</a>
+               <a>this is one-three</a>
+            </div>
+        </li>
+        <li>
+            <h4 class="title">this is two</h4>
+            <div>
+                <span>this is one-one</span>
+                <span>this is one-two</span>
+            </div>
+        </li>
+        <li>
+            <h4 class="title">this is two</h4>
+            <div>
+                <span>this is one-one</span>
+                <span>this is one-two</span>
+            </div>
+        </li>
+    </ul>
+    <script>
+        jQuery(document).ready(function($){
+            $("ul li h4").on({
+                click : function(){
+                    $(this).next("div").stop().toggle(100);
+                }
+            })
+        });
+    </script>
+</body>
+</html>

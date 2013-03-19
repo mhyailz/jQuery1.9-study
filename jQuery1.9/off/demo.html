@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>off</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ffadad;
+        }
+        .changeColor{
+            background: #ccc;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <button id="btn1">change color</button>
+    <button id="btn2">no change</button>
+    <div class="changeColor"></div>
+    <script>
+        (function($){
+            var c = function(){
+                //console.log("click");
+                $(this).toggleClass("changeColor");
+            };
+            $("#btn1").eq(0).click(function(){
+                $("div").on("click",c);
+            });
+            $("#btn2").eq(1).click(function(){
+                $("div").off("click",c);
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

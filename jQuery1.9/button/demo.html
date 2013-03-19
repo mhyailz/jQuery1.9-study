@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>button</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+
+             var $_btn = $(":button");
+
+             $_btn.bind({
+                 click : function(){
+                     console.log("the page has " + $_btn.length + " button");
+                 }
+             })
+         })
+    </script>
+</head>
+<body>
+    <div class="box">
+        <input type="button" value="button" />
+        <input type="text" />
+        <input type="email" />
+        <button>button</button>
+    </div>
+</body>
+</html>

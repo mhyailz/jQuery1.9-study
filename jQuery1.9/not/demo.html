@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>not</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <b>this is one</b>
+    <b>this is two</b>
+    <b>this is three</b>
+    <b>this is four</b>
+    <b>this is five</b>
+    <script>
+        (function($){
+            $("b").not(":even").css({
+                color : "#ffadad"
+            }).end().css({
+                textDecoration : "underline"
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

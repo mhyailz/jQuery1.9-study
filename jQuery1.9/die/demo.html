@@ -1,0 +1,30 @@
+<!--
+
+   die 解除由live 绑定的事件。。
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>die</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            var showMessage = function(){
+                console.log("click");
+                $("button").die("click",showMessage);
+            }
+
+            $("button").live("click",showMessage);
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <button>change</button>
+        <p>this is one</p>
+    </div>
+</body>
+</html>

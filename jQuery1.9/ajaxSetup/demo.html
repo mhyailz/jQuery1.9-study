@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ajaxSetup</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $.ajaxSetup({
+           url : "test.html"
+        })
+
+        var req = $.ajax({
+            //          此处默认添加了ajaxSetup里面的内容.
+            data : "women"
+        })
+
+        req.complete(function(xhr,status){
+            console.log(xhr.responseText);
+            console.log(status);
+        });
+    </script>
+</head>
+<body>
+    <div class="log"></div>
+</body>
+</html>

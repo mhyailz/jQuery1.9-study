@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>slice</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+        <li>this is four</li>
+    </ul>
+    <script>
+        jQuery(document).ready(function($){
+            $("li").slice(0,2).css({
+                color : "#8f8"
+            });
+            $("li").slice(3).css({
+                color : "#f00"
+            })
+        })
+    </script>
+</body>
+</html>

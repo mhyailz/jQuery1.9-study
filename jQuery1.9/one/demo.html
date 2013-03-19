@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>one</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <button>click</button>
+    <script>
+        (function($){
+            $("button").one("click",function(e){
+                console.log(e + "only one time");
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

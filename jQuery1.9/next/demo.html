@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>next</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is a</li>
+        <li>this is b</li>
+        <li>this is c</li>
+        <li>this is d</li>
+    </ul>
+    <p>this is one</p>
+    <p class="foo">this is two</p>
+    <p>this is three</p>
+    <script>
+        (function($){
+            $("li").eq(0).next().css({
+                background : "#ffadad"          //eq(1)
+            }).end().css({
+                background : "#ccc"            //eq(0)
+            }).end().css({
+                textDecoration : "underline"   //$("li")
+            });
+
+            $("p").next(".foo").css({
+                textDecoration : "underline"
+            })
+        })(jQuery);
+
+    </script>
+</body>
+</html>

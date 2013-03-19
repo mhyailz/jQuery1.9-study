@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hover</title>
+    <style>
+        .red{
+            background: red;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div>this is a div</div>
+    <script>
+        $("div").css({
+            width : "100px",
+            height : "100px",
+            background : "#ffadad",
+            margin : "0 auto",
+            padding : "10px"
+        })
+        /* 1-----     *
+        $("div").hover(function(){
+            $(this).css("background","#f00");
+        },function(){
+            $(this).css("background","#ffadad");
+        })*/
+        $("div").hover(function(){
+            $(this).stop().slideToggle();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>html</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+     <p>this is a p</p>
+     <script>
+         $(function(){
+             var c = $("<a></a>").html($("p").html());
+             c.appendTo($("body"));
+             $("p").after($("a"));
+            // $("a").before($("p"));
+         })
+     </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>is</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            //var isForm = $("input").parent().is("form");          //true
+              var isForm = $("input").parent().is(function(){
+                  return "form";
+              })                                                   //true;
+            console.log(isForm);
+        })
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" />
+    </form>
+</body>
+</html>

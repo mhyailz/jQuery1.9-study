@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>radio</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="radio" name="this is a radio" />
+    <input type="radio" name="this is a radio" />
+    <script>
+        (function($){
+            var $name = $(":radio").attr("name");
+
+            console.log($name);
+
+        })(jQuery);
+    </script>
+</body>
+</html>

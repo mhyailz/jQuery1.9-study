@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>password</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="password" />
+    <script>
+        (function($){
+            $(":password").css({
+                background : "#8f8"
+            });
+            $('[type = "password"]').css({
+                border : "2px solid #f00"
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

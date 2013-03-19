@@ -1,0 +1,24 @@
+<!--
+
+    $(a).before("b")   //把b放在整个a标签的前面    比较after
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>before</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").before( $("b") );
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+    <div class="box"></div>
+    <b>hello world</b>
+</body>
+</html>

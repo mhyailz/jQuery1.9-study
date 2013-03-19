@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>contains</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+           $("div:contains('jone')").css({
+               textDecoration : "underline"
+           })                            // 1,2,3,4 change
+       })
+    </script>
+</head>
+<body>
+    <div>this is jone</div>
+    <div>this is ma jone</div>
+    <div>this is hon jone</div>
+    <div><p>the jone-ho</p></div>
+    <div>the JONE</div>
+</body>
+</html>

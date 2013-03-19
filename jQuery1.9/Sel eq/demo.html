@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>:eq</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("p:eq(0)").css({
+                color : "#ffadad"
+            });
+
+            $("p:eq(-1)").css({
+                color : "#f00"
+            });                                 //相当于 负数 + length
+
+            console.log($("p").length);         //5
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>this is one p</p>
+        <p>this is two p</p>
+        <p>this is three p</p>
+        <p>this is four p</p>
+        <p>this is five p</p>
+    </div>
+</body>
+</html>

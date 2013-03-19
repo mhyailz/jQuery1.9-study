@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>event.stopImmediatePropagation</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div>
+    <p>this is a p</p>
+</div>
+<script>
+    $(function(){
+        $("div").css({
+            width : "200px",
+            height : "200px",
+            background : "#ffadad"
+        }).children("p").css({
+                    background: "#f00"
+                });
+        $("p").click(function(e){
+            e.stopPropagation();                //停止传播   div /body的click均无法响应     即阻止冒泡
+            $(this).css({
+                background: "#ff0"
+            });
+        });
+        $("div").click(function(e){
+            $(this).css({
+                background : "#ff0"
+            });
+        })
+        $("body").click(function(e){
+            $(this).css({
+                background : "#ff0"
+            })
+            console.log($(this));
+        })
+    })
+</script>
+</body>
+</html>

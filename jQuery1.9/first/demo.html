@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>first</title>
+    <script src="../jquery-1.9.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <ul>
+        <li>this is a </li>
+        <li>this is b</li>
+        <li>this is c</li>
+    </ul>
+    <script>
+        $(function(){
+            $("li").first().css({
+                background : "#ffadad"
+            });
+            $("li").eq(0).css({
+                fontSize : "20px"
+            })
+            $("li:first").css({
+                textDecoration : "underline"
+            })
+            $("li").filter(":first").css({
+                fontStyle : "italic"
+            })
+        })
+    </script>
+</body>
+</html>

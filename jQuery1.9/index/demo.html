@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is 1</li>
+        <li>this is 2</li>
+        <li class="bor">this is 3</li>
+    </ul>
+    <script>
+        $(function(){
+            $("li").click(function(e){
+                //$("<p></p>").html($("a").index()).appendTo($("body"));                //-1 -1 -1
+                //$("<p></p>").html($("li").index(this)).appendTo($("body"));            //0 ,1 ,2
+                //$("<p></p>").html($(this).index("li")).appendTo($("body"));           //0,1,2
+                //$("<p></p>").html($("li").index($(this))).appendTo($("body"));       //0,1,2
+                //$("<p></p>").html($("li").index($(".bor"))).appendTo($("body"));  //2 ,2 ,2
+                //console.log(e);
+            })
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>click</title>
+    <style>
+        .box{
+            background: #ffadad;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").click(function(){
+                $(this).slideUp();
+            })                       //为click绑定事件
+
+             $(".box").click();     //无参表示触发这个事件
+        })
+    </script>
+</head>
+<body>
+     <div class="box"></div>
+</body>
+</html>

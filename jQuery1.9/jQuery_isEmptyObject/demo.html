@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.isEmptyObject</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var c = {};
+            var b = {name : "mhy",age : 12};
+            console.log($.isEmptyObject(c));              //true
+            console.log($.isEmptyObject(b));              //false
+        })(jQuery);
+    </script>
+</body>
+</html>

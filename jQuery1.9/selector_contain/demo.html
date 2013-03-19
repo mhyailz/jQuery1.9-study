@@ -1,0 +1,60 @@
+<!--
+
+    $(a[href |= "value"]) 表示只有value值的或者是value值之后是“-”连接的
+    $(a[href *= "value"]) 表示href中含有value的
+    $(a[href ~= "value"]) 表示href中有完整单独的value这个词的
+
+    $(a[href $= "value"]) 表示href中以value结尾的
+    $(a[href ^= "value"]) 表示href中以value开关的
+
+    $(a[href = "value"]) 表示严格等于的
+    $(a[href != "value"]) 表示严格不等于的。
+
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>selector_contain</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("a[data-name |= 'num1']").css({
+                 color : function(){return "#ffadad"}
+             });                                   //        1 ,4 change
+
+             $("a[data-name *= 'num']").css({
+                 fontSize : function(){ return "20px"}
+             })                                   //         all change
+
+             $("a[data-name ~= 'num2']").css({
+                 border : "3px solid #ccc"
+             })                                   //         2,5change
+
+             $("a[data-name $= 'num2']").css({
+                 background : "#ccc"
+             })                                  //           2,6change
+
+             $("a[data-name ^= 'num']").css({
+                 marginLeft : "10px"
+             })                                  //           除6之外其它全变
+
+             $("a[data-name = 'num2']").css({
+                 textDecoration : "underline"
+             })                                 // only 2  change
+
+             $("a[data-name != 'num2']").css({
+                 textDecoration : "line-through"     //除了2其它全变
+             })
+         })
+    </script>
+</head>
+<body>
+    <a data-name="num1">this is num1</a>
+    <a data-name="num2">this is num2</a>
+    <a data-name="num3">this is num3</a>
+    <a data-name="num1-1">this is num1-1</a>
+    <a data-name="num2 num4">this is num2 num4</a>
+    <a data-name="hellonum2">this is hellonum2</a>
+</body>
+</html>

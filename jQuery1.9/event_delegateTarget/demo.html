@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+<head>
+    <title>event.delegateTarget</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("div").css({
+                width : "200px",
+                height : "200px",
+                background : "#ffadad"
+            }).on("click",function(e){
+                console.log(e.delegateTarget === e.currentTarget);    //true
+            }).on("mouseenter","p",function(e){
+                console.log(e.delegateTarget);                     // div
+                console.log(e.currentTarget);                      // p
+                console.log(e.target);                              // p
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>this is a p</p>
+    </div>
+</body>
+</html>

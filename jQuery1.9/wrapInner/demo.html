@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wrapInner</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <a>this is a<span>this is span</span></a>
+    <script>
+        jQuery(document).ready(function($){
+            $("a").wrapInner("<b></b>");
+        })
+    </script>
+</body>
+</html>

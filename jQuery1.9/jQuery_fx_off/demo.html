@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.fx.off</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ffadad;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div></div>
+    <button>click</button>
+    <script>
+        (function($){
+            $.fx.off = true ;               //当为true时，直接跳过动画到最终状态,默认此值为false ;
+            $("button").click(function(){
+                $("div").toggle("3000");
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

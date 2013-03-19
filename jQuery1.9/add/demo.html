@@ -1,0 +1,32 @@
+<!--
+    $(a).add(b)  ========把获取a和b的集合返回，但并不改变$(a)的值。
+-->
+<!doctyle html>
+<html>
+<head>
+    <title>add</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+
+		//$("li").add("<p>this is another</p>").css("color","#ff0000");
+
+        var $_p = $("li");
+
+        $_p = $_p.add("p");       //$_p.add("p")是两个对象的集合;不赋值的话不会改变$_p的值。
+
+        $_p.css("color","#f00");
+
+	});
+    </script>
+</head>
+<body>
+	<ul>
+		<li>123455</li>
+		<li>123455</li>
+		<li>123455</li>
+		<li>123455</li>
+	</ul>
+	<p>this is p</p>
+</body>
+</html>

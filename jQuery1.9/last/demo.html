@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>last</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is a</li>
+        <li>this is b</li>
+        <li>this is c</li>
+    </ul>
+    <script>
+        (function($){
+            $("li").css({
+                background : "#ccc"
+            }).last().css({
+                background : "#ffadad"
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

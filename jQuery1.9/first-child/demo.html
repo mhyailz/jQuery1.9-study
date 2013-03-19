@@ -1,0 +1,31 @@
+<!--
+   :first 获取的是第一个元素集合
+   :first-child 获取的是每个元素的第一个元素集合。
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>first-child</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>this is out
+        <li>this is a<a>this is a a</a></li>
+        <li>this is b</li>
+    </ul>
+    <ul>this is out
+        <li>this is a<a>this is a a</a></li>
+        <li>this is b</li>
+    </ul>
+    <script>
+        $(function(){
+            $("ul li:first-child").css({
+                fontSize : "20px"
+            })
+            $("ul li:first").css({
+                textDecoration : "underline"
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fadeToggle</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <button>click</button>
+    <p>this is a p</p>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("p").fadeToggle("slow",function(){
+                    console.log("fadeToggle complete");
+                })
+            })
+        })
+    </script>
+</body>
+</html>

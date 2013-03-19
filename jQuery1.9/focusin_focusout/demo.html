@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>focusin,focusout</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+     <input type="text" />
+     <script>
+         $(function(){
+             $("input").focusout(function(){
+                 console.log("input focusout");
+             });                            //区别blur
+             $("input").focusin(function(){
+                 console.log("input focusin");
+             })
+         })
+     </script>
+</body>
+</html>

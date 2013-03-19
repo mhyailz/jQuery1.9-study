@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hasClass</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p class="demo">this is a</p>
+    <p>this is b</p>
+    <p>this is c</p>
+    <p class="demo">this is d</p>
+    <script>
+        $(function(){
+            $("p").each(function(index,element){
+                if($(element).hasClass("demo")){
+                    $(element).css({
+                        background : "#ffadad"
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>focus</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+     <input type="text" />
+     <button>chick</button>
+     <script>
+         $(function(){
+             $("input").focus({name : "hon",age: "12"},function(e){
+                 console.log(e.data.name);
+             })
+             setTimeout(function(){
+                 $("input:focus").css({
+                     background : "#ffadad"
+                 })
+             },0);
+
+         })
+     </script>
+</body>
+</html>

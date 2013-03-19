@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>prepend</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div></div>
+    <script>
+        (function($){
+            var b = $("<b></b>");
+            b.attr("id","ch").text("this is a b");
+            $("div").prepend(b);
+        })(jQuery);
+    </script>
+</body>
+</html>

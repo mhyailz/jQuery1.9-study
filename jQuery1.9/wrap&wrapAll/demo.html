@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wrap</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <a>this is a</a>
+    <a>this is a</a>
+    <a>this is a</a>
+    <a>this is a</a>
+    <script>
+        jQuery(document).ready(function($){
+            /*
+            $("a").on({
+                click : function(){
+                    if($(this).parent().is("b")){
+                        $("a").unwrap();
+                    }else{
+                        $("a").wrap("<b></b>");
+                    }
+                }
+            }); */
+            $("a").wrapAll("<span></span>");
+        })
+    </script>
+</body>
+</html>

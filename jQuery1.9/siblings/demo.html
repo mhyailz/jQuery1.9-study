@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>siblings</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+        <li>this is four</li>
+    </ul>
+    <script>
+        jQuery(document).ready(function($){
+            $("ul li").eq(1).siblings().css({
+                color : "#ffadad"
+            }).end().css({
+                color : "#0f0"
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.merge</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var a =[1,2,3];
+            var b =[2,3,4];
+            var newArray = $.merge([],a);             //copy a
+            console.log(newArray);                    // 1,2,3
+            $.merge(a,b);
+            console.log(a);          //1,2,3,2,3,4
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>queue</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            background: #ffadad;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("#start").click(function(){
+                 $(".box").slideDown();
+                 $(".box").animate({
+                    left : "+=100"
+                 },2000);
+                 $(".box").queue(function(){
+                     $(".box").css({
+                         background : "#000"
+                     });
+                     $(".box").dequeue();
+                 });
+                 $(".box").animate({
+                    left : "-=100"
+                 },2000);
+             });
+             $("#stop").click(function(){
+                 $(".box").clearQueue();
+                 $(".box").stop();
+             })
+         })
+    </script>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <div class="box">
+
+    </div>
+</body>
+</html>

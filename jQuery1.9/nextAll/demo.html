@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>nextAll</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div>this is one</div>
+    <div>this is two</div>
+    <div>this is three</div>
+    <script>
+        (function($){
+            $("div").eq(0).nextAll().css({
+                textDecoration : "underline"
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

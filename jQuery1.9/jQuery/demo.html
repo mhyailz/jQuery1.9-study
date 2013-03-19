@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div>this is the first div</div>
+    <div>
+        <p>this is the second p</p>
+    </div>
+    <p>this is a single p</p>
+    <script>
+        /*
+        $(function(){
+            $("div").css({
+                border : "1px solid #ccc",
+                background : "#ffadad",
+                width : "100px",
+                height : "100px"
+            });
+        });
+        $("div").click(function(){
+            $("p",this).css({
+                color : "#f00"
+            })
+        })
+        $("<span></span>",{
+           "class" : "test",
+            on : {
+                click : function(e){
+                    console.log(e);
+                }
+            }
+        }).html("this is a span").appendTo($("body"));
+        */
+        $(function(){
+            console.log($.support);
+        })
+    </script>
+</body>
+</html>

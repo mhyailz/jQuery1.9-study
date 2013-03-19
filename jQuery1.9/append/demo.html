@@ -1,0 +1,26 @@
+<!--
+
+    $(a).append(b) == $(b).appendTo(a)              把b添加到a元素内的最后面
+    $(a).prepend(b) == $(b).prependTo(a)            把b添加到a元素内的最前面
+
+    注比较：after和before的不同
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>append</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").append("<p>world</p>")         //  ==  $("<p>world</p>").appendTo(".box");
+
+            $(".box").prepend("<h2>woo</h2>")       //   ==  $("<h2>woo</h2>").appendTo(".box")
+        })
+    </script>
+</head>
+<body>
+    <div class="box">hello</div>
+</body>
+</html>

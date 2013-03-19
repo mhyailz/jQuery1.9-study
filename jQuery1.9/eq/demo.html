@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eq</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("ul").find("li").eq(0).css({
+                color : "#ffadad"
+            })
+            console.log($("ul").find("li").length);
+            $("ul").find("li").eq(-3).css({
+                color : "#f00"
+            })                       //   相当于  负数 + length
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+        <li>this is four</li>
+        <li>this is five</li>
+    </ul>
+</body>
+</html>

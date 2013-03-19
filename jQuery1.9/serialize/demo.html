@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>serialize</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <form>
+        <select name="single">
+            <option>this is one</option>
+            <option>this is two</option>
+            <option>this is three</option>
+        </select>
+        <input type="radio" name="mhy" value="mhy1" />
+        <input type="radio" name="mhy" value="mhy2" />
+        <input type="checkbox" name="ckb" value="ckb1" />
+        <input type="checkbox" name="ckb" value="ckb2" />
+    </form>
+    <div id="result"></div>
+    <script>
+        jQuery(document).ready(function($){
+            var showMessage = function(){
+                var str = $("form").serialize();
+                $("#result").text(str);
+            }
+            $("select").change(showMessage);
+            $(":radio,:checkbox").click(showMessage);
+        });
+    </script>
+</body>
+</html>

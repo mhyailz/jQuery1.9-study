@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>promise</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div></div>
+    <p></p>
+    <script>
+        (function($){
+        var c=$("div").css({
+                width : "100px",
+                height : "100px",
+                background : "#ffadad",
+                position : "absolute"
+            }).slideUp("2000").slideDown("2000").animate({left : "100px"},2000).fadeOut("2000");
+            $.when(c).done(function(){
+                $("p").append(" Finished! ");
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.support</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var ajax = $.support.ajax;                      console.log(ajax);      //true
+            var boxModel = $.support.boxModel;              console.log(boxModel);  //true
+            var changeBubbles = $.support.changeBubbles;    console.log(changeBubbles); //ie为false
+            var checkClone = $.support.checkClone;          console.log(checkClone);   // true
+            var checkOn = $.support.checkOn;                console.log(checkOn);     // true
+            var style = $.support.style;                    console.log(style);       //ie为false
+        })(jQuery);
+    </script>
+</body>
+</html>

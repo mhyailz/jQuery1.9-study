@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>event.type</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        $(function(){
+            $("div").css({
+                width : "200px",
+                height : "200px",
+                background : "#ffadad"
+            });
+            $("div").click(function(e){
+                console.log(e.type);
+            })
+            $("div").bind("mouseenter",function(e){
+                console.log(e.type);
+            })
+        })
+    </script>
+</body>
+</html>

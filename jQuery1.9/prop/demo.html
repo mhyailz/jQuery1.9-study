@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>prop</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" checked="true" />
+    <input type="checkbox" checked="true" />
+    <input type="checkbox" checked="true" />
+    <input type="checkbox" checked="true" />
+    <input type="checkbox" checked="true" />
+    <script>
+        (function($){
+            var c ;
+            var b ;
+            $("input").change(function(){
+                c = $('[type = "checkbox"]').prop("checked");
+                b = b ||$("<b></b>");
+                b.text(c).appendTo($("body"));
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

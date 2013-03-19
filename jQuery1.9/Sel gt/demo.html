@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>:gt</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <p>this is 0</p>
+    <p>this is 1</p>
+    <p>this is 2</p>
+    <p>this is 3</p>
+    <p>this is 4</p>
+    <p>this is 5</p>
+    <script>
+        $(function(){
+            $("p").filter(":gt(2)").css({
+                color : "#f00"
+            });
+            $("p").filter(":eq(2)").css({
+                color : "#0f0"
+            });
+            $("p").filter(":lt(2)").css({
+                color : "#00f"
+            })
+        })
+    </script>
+</body>
+</html>

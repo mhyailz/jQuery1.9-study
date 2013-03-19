@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>attr</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $_title = $("div").attr("title");       //获取title值
+            //$("p").text($_title);
+
+           // $("p").attr("alt","hello world");      //改变alt的值
+
+            $("p").attr("alt",function(){
+                return $(this).attr("title");     //函数形式改变alt值
+            })
+        })
+    </script>
+</head>
+<body>
+    <div title="hello world"></div>
+    <p title="1"></p>
+    <p title="2"></p>
+</body>
+</html>

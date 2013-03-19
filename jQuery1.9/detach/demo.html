@@ -1,0 +1,35 @@
+<!--
+
+
+   $("p").detach()           //使所有p移除，同时返回被移出的元素。。
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>detach</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            var $p ;
+            $("button").click(function(){
+                if($p){
+                    $p.appendTo("div");
+                    $p = null ;
+                }else{
+                    $p = $("p").detach();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <button>change</button>
+        <p>this is one</p>
+        <p>this is two</p>
+    </div>
+</body>
+</html>

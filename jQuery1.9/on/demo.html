@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>on</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <input type="button" value="click" />
+    <div></div>
+    <script>
+        (function(){
+            $("input:button").click(function(){
+                $("div").trigger("myEvent.click",["jone",12]);
+            });
+            $("div").on({
+                "myEvent.click" : function(event,myname,myage){
+                    console.log(event + myname +  " is my name.and myage is " + myage);
+                },
+                click : function(event){
+                    console.log(event);
+                },
+                mouseover : function(event){
+                   console.log(event);
+                },
+                mouseenter :function(event){
+                    console.log(event);
+                }
+            })
+        })();
+    </script>
+</body>
+</html>

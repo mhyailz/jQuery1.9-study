@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery.map</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function($){
+            var arr = [10,20,30,40,50];
+            arr = $.map(arr,function(value,index){
+                return [value - 1,index];
+            })
+            console.log(arr);             // [9,0,19,1,29,2,39,3,49,4]
+
+            arr = $.map(arr,function(value){
+                return value + 1 ;
+            })
+            console.log(arr);            //[10,1,20,2,30,3,40,4,50,5]
+
+            var obj ={ name: "mhy",age: 12};
+
+            obj = $.map(obj,function(value,key){
+                return value + key;
+            })
+            console.log(obj);          // ["mhyname","12age"]
+        })(jQuery);
+    </script>
+</body>
+</html>

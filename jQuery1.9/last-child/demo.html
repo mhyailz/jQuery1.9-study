@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>:last-child</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+    </ul>
+    <ul>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+    </ul>
+    <script>
+        (function($){
+            $("ul li:last-child").css({
+                background : "#ffadad"
+            });
+            $("ul li").last().css({
+                textDecoration : "underline"
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

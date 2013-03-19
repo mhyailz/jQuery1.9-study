@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>end</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+         $(function(){
+             $("body").find("div").find("span").end().css({
+                 fontSize : "20px"
+             });
+             console.log($("body").find("div").find("span").end());        //返回div
+             console.log($("body").find('div').end());                     //返回body
+         })
+    </script>
+</head>
+<body>
+    <div>
+        <span>hello</span> world.
+    </div>
+</body>
+</html>

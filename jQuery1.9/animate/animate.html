@@ -1,0 +1,75 @@
+<!--
+
+    animate(properties,[duration],[easing],[callback])        version added : 1.0
+
+    properties      一组CSS属性，动画将朝着这组属性移动。
+    duration        一个字符串或者数字决定动画将运行多久。
+    easing          要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing"。
+    callback        在动画完成时执行的函数。
+
+
+    animate(properties,options)
+
+    properties       一组css属性
+
+    options          一组包含动画选项的值的集合
+
+        duration: (默认值: "normal") 三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+        easing:(默认值: "swing") 要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing"。
+        complete: 在动画完成时执行的函数。
+        step: 每步动画执行后调用的函数。
+        queue: (默认值: true) 设定为false将使此动画不进入动画队列
+        specialEasing:一组一个或多个通过相应的参数和相对简单函数定义的CSS属性 ( 1.4 新增).
+
+
+
+
+
+
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>animate</title>
+    <style type="text/css">
+        .element{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color : #f00;
+            position: relative;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $(".element").animate({
+                    width : ["toggle","swing"],
+                    height : "toggle"
+                },{
+                    duration : 3000,
+                    easing : "swing",
+                    complete : function(){
+                        alert("complete");
+                    },
+                    specialEasing : {
+                        width : "linear",
+                        height : "linear"
+                    },
+                    queue : true
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+      <button value="change">change</button>
+      <div class="element"></div>
+</body>
+</html>

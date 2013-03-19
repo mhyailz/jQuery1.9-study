@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>offset</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        (function(){
+            var c = $("<div></div>");
+            c.attr({"id":"dv","title":"this is a div"});
+            c.css({
+                width : "100px",
+                height : "100px",
+                borderRadius : "50px",
+                background : "#8f8",
+                margin : "10px auto"
+            });
+            $("body").prepend(c);
+            console.log($("div").offset());
+        })(jQuery);
+    </script>
+</body>
+</html>

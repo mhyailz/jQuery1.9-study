@@ -1,0 +1,31 @@
+<!--
+    $(a).after()  ==========插入到选中元素的紧挨后面。
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>after</title>
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+             //$("p").after("<b>hello this is b</b>");     // 直接插入p之后
+
+            // $("p").after( $("b") );      //能够插入
+
+            // $("p").after($("<b></b>"))  //能够插入
+
+             $("p").after(function(){
+                 return "<div>this is a div</div>";
+             })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <b>hello world</b>
+        <p>this is first paragraph</p>
+
+    </div>
+</body>
+</html>

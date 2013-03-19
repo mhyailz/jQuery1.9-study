@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery.Callbacks</title>
+    <script type="text/javascript" src="../jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <script>
+        function fn1(value){
+           console.log(value);
+        }
+        function fn2(value){
+            fn1(" fn2 says: " + value);
+            return false;
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add( fn1 );
+
+        callbacks.fire( "foo!" );
+
+        callbacks.add( fn2 );
+
+        callbacks.fire( "bar!" );
+
+        //callbacks.remove(fn1);
+
+        callbacks.fire("fo2!");
+    </script>
+</body>
+</html>
